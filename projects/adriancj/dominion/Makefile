@@ -1,5 +1,8 @@
-CFLAGS = -Wall -fpic -coverage -lm
+# Modified by Joel Adriance 2-3-2018
+# now provides operation for handling unit tests
 
+CFLAGS = -Wall -fpic -coverage -lm
+	
 rngs.o: rngs.h rngs.c
 	gcc -c rngs.c -g  $(CFLAGS)
 
@@ -32,7 +35,47 @@ runtests: testDrawCard
 
 player: player.c interface.o
 	gcc -o player player.c -g  dominion.o rngs.o interface.o $(CFLAGS)
+	
 
+# Unit test rules for Assignment 3 - Joel Adriance
+testUtils.o: testUtils.c testUtils.h
+	gcc -c testUtils.c
+
+unittest1: unittest1.c testUtils.o dominion.o rngs.o
+	gcc -o unittest1 unittest1.c testUtils.o dominion.o rngs.o $(CFLAGS) 
+unittest2: unittest2.c testUtils.o dominion.o rngs.o
+	gcc -o unittest2 unittest2.c testUtils.o dominion.o rngs.o $(CFLAGS)
+unittest3: unittest3.c testUtils.o dominion.o rngs.o
+	gcc -o unittest3 unittest3.c testUtils.o dominion.o rngs.o $(CFLAGS) 
+unittest4: unittest4.c testUtils.o dominion.o rngs.o
+	gcc -o unittest4 unittest4.c testUtils.o dominion.o rngs.o $(CFLAGS)
+	
+cardtest1: cardtest1.c testUtils.o dominion.o rngs.o
+	gcc -o cardtest1 cardtest1.c testUtils.o dominion.o rngs.o $(CFLAGS) 
+cardtest2: cardtest2.c testUtils.o dominion.o rngs.o
+	gcc -o cardtest2 cardtest2.c testUtils.o dominion.o rngs.o $(CFLAGS)
+cardtest3: cardtest3.c testUtils.o dominion.o rngs.o
+	gcc -o cardtest3 cardtest3.c testUtils.o dominion.o rngs.o $(CFLAGS)
+cardtest4: cardtest4.c testUtils.o dominion.o rngs.o
+	gcc -o cardtest4 cardtest4.c testUtils.o dominion.o rngs.o $(CFLAGS)
+	
+unittests: unittest1 unittest2 unittest3 unittest4
+cardtests: cardtest1 cardtest2 cardtest3 cardtest4
+
+unittestresults.out: unittests cardtests 
+	echo "Compiled all unit tests."	
+	echo "Running unit tests..."
+	unittest1 >> unittestresults.out 
+	#gcov -abcfu dominion.c | sed -n '/shuffle/{n;p; n;p; n;p; n;p}' >> unittestresults.out
+	unittest2 >> unittestresults.out
+	unittest3 >> unittestresults.out
+	unittest4 >> unittestresults.out
+	echo "Running card tests..."
+	cardtest1 >> unittestresults.out
+	cardtest2 >> unittestresults.out
+	cardtest3 >> unittestresults.out
+	cardtest4 >> unittestresults.out
+	
 all: playdom player testDrawCard testBuyCard badTestDrawCard
 
 clean:
