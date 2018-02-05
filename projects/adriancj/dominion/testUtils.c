@@ -18,13 +18,10 @@
  #define FAIL_MSG "FAILED"
  
  // Returns 1 if true, 0 if false
-int HasDuplicates(int pCards[], int numCards)
-{
+int HasDuplicates(int pCards[], int numCards) {
 	int i, j;
-	for (i = 0; i < numCards; ++i)
-	{
-		for (j = 0; j < numCards; ++j)
-		{
+	for (i = 0; i < numCards; ++i) {
+		for (j = 0; j < numCards; ++j) {
 			if (i != j && pCards[i] == pCards[j])
 				return 1;
 		}
@@ -33,11 +30,9 @@ int HasDuplicates(int pCards[], int numCards)
 }
 
 // Returns 1 if true, 0 if false
-int HasCard(int card, int pCards[], int numCards)
-{
+int HasCard(int card, int pCards[], int numCards) {
 	int i;
-	for (i = 0; i < numCards; ++i)
-	{
+	for (i = 0; i < numCards; ++i) {
 		if (pCards[i] == card)
 			return 1;
 	}
@@ -47,52 +42,33 @@ int HasCard(int card, int pCards[], int numCards)
 // Used for testing initialization base on kingdom cards
 // This DOES NOT ensure that their are no duplicates unless the flag is set!
 // The uniqueness can be checked using HasDuplicates
-int* GetRandomizedKingdomCards(int forceUnique)
-{
+int* GetRandomizedKingdomCards(int forceUnique) {
 	int cnt = 0;
 	int* kingdomCards = malloc(sizeof(int) * NUM_K_CARDS);
 	memset(kingdomCards, 0, sizeof(int) * NUM_K_CARDS);
 	
-	while (cnt < NUM_K_CARDS)
-	{
-		do
-		{
+	while (cnt < NUM_K_CARDS) {
+		do {
 			kingdomCards[cnt] = (rand() % (treasure_map - adventurer + 1) + adventurer);
 		} while (HasDuplicates(kingdomCards, cnt+1) && forceUnique);
 		cnt++;
 	}
 	return kingdomCards;
 }
-
  
- // Returns the result of the test, mirroring the result of 'condition'. 
- // Also prints the test description to the console so bugs can be tracked down.
-int TestVal(int condition, const char* pTestDescription, int val) {
-	if (condition)
-	{
-		printf("%s (%d) - %s\n", pTestDescription, val, PASS_MSG);
-	}
-	else
-	{
-		printf("%s (%d) - %s\n", pTestDescription, val, FAIL_MSG);
-	}
-	return condition;
-}
- 
-// Same as TestValm but doesn't provide an argument for a test value
+// Same as TestVal but doesn't provide an argument for a test value
 int Test(int condition, const char* pTestDescription) {
-	if (condition)
-	{
+	if (condition) {
 		printf("%s - %s\n", pTestDescription, PASS_MSG);
 	}
-	else
-	{
+	else {
 		printf("%s - %s\n", pTestDescription, FAIL_MSG);
 	}
 	return condition;
 }
- 
-int TestVal2(int testVal, int expectedVal, const char* testDescription) {
+
+// Returns 1 if the testVal is equal to the expectedVal. Otherwise returns 0;
+int TestVal(int testVal, int expectedVal, const char* testDescription) {
 	if (testVal == expectedVal)
 		printf("%s - %s\n", testDescription, PASS_MSG);
 	else
@@ -112,6 +88,7 @@ int DecksMatch(struct gameState* state1, struct gameState* state2, int player) {
 	return 1;
 }
 
+// Returns 1 if the player has the same hand in both game states. Returns 0 otherwise.
 int HandsMatch(struct gameState* state1, struct gameState* state2, int player) {
 	if (state1->handCount[player] != state2->handCount[player])
 		return 0;
@@ -123,17 +100,12 @@ int HandsMatch(struct gameState* state1, struct gameState* state2, int player) {
 	return 1;
 }
 
+// Returns 1 if the supply counts for the given card are equal in both game states. Returns 0 otherwise
 int SuppliesMatch(struct gameState* state1, struct gameState* state2, int card) {
-	//int result;
 	return (state1->supplyCount[card] == state2->supplyCount[card]);
-	/*	result = 0;
-	else
-		result = 1;
-	if (!result)
-		printf("Card id %d supply pile mismatch! %d != %d\n", card, state1->supplyCount[card], state2->supplyCount[card]);
-	return result;*/
 }
 
+// Returns 1 if the counts in ALL supply piles match in both game states. Otherwise, returns 0
 int AllSuppliesMatch(struct gameState* state1, struct gameState* state2){
 	int i;
 	for (i = 0; i <= treasure_map; ++i) {
@@ -143,7 +115,7 @@ int AllSuppliesMatch(struct gameState* state1, struct gameState* state2){
 	return 1;
 }
 
-// Check matching cards without considering order
+// Check matching cards without considering order. Return 1 if same, 0 if not
 int SameCardCombo(int* set1, int count1, int* set2, int count2) {
 	if (count1 != count2)
 		return 0;
@@ -155,11 +127,12 @@ int SameCardCombo(int* set1, int count1, int* set2, int count2) {
 	memset(cardCnts1, 0, sizeof(int) * numTypes);
 	memset(cardCnts2, 0, sizeof(int) * numTypes);
 	int i;
-	for (i = 0; i < count1; ++i)
-		if (set1[i] > -1)
-			cardCnts1[i] += set1[i];
-		if (set2[i] > -1)
-			cardCnts2[i] += set2[i];
+	// Count the number of each type
+	for (i = 0; i < count1; ++i) {
+		cardCnts1[set1[i]] += 1;
+		cardCnts2[set2[i]] += 1;
+	}
+	// Compare the counts
 	for (i = 0; i < numTypes; ++i) {
 		if (cardCnts1[i] != cardCnts2[i])
 			free(cardCnts1);
@@ -182,3 +155,53 @@ int SameHandCombo(struct gameState* state1, struct gameState* state2, int player
 	return SameCardCombo(state1->hand[player], state1->handCount[player],
 						 state2->hand[player], state2->handCount[player]);
 }
+
+// Return the number of cards of the specified type in pCards
+int CountCards(int cardType, int pCards[], int numCards) {
+	int count =0;
+	int i;
+	for (i = 0; i < numCards; ++i) {
+		if (pCards[i] == cardType)
+			count++;
+	}
+	return count;
+}
+
+/* Return 1 if the 
+int CheckSupply(struct gameState* pState, int card, int count) {
+	assert(card >= 0 && card <= treasure_map);
+	if (pState->supplyCount[card] == count)
+		return 1;
+	else
+		return 0;
+}
+
+int CheckHand(struct gameState* pState, int player, int card, int count) {
+	assert(card >= 0 && card <= treasure_map);
+	assert(player >= 0 && player < pState->numPlayers);
+	
+	if (pState->hand[player][card] == count)
+		return 1;
+	else
+		return 0;
+}
+
+int CheckDiscard(struct gameState* pState, int player, int card, int count) {
+	assert(card >= 0 && card <= treasure_map);
+	assert(player >= 0 && player < pState->numPlayers);
+	
+	if (pState->discard[player][card] == count)
+		return 1;
+	else
+		return 0;
+}
+
+int CheckDeck(struct gameState* pState, int player, int card, int count) {
+	assert(card >= 0 && card <= treasure_map);
+	assert(player >= 0 && player < pState->numPlayers);
+	
+	if (pState->deck[player][card] == count)
+		return 1;
+	else
+		return 0;
+}*/

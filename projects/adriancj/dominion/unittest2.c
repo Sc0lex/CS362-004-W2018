@@ -41,7 +41,6 @@ int ReshuffleCheck(struct gameState* startState, int player) {
 		shuffle(player, thisShuffle);
 		
 		allSame &= DecksMatch(firstShuffle, thisShuffle, player);
-		printf("All Same: %d\n", allSame);
 		i++;
 	} while(allSame && i < RESHUFFLE_TRIES);
 	free(firstShuffle);

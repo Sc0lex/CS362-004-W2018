@@ -11,15 +11,17 @@
  
  // Returns the result of the test, mirroring the result of 'condition'. 
  // Also prints the test description to the console so bugs can be tracked down.
- int TestVal(int condition, const char* pTestDescription, int val);
  int Test(int condition, const char* pTestDescription);
- int TestVal2(int testVal, int expectedVal, const char* testDescription);
+ int TestVal(int testVal, int expectedVal, const char* testDescription);
  
  // Returns 1 if true, 0 if false
 int HasDuplicates(int pCards[], int numCards);
 
 // Returns 1 if true, 0 if false
 int HasCard(int card, int pCards[], int numCards);
+
+// Return the number of cards of the specified type in pCards
+int CountCards(int cardType, int pCards[], int numCards);
 
 // Used for testing initialization base on kingdom cards
 // This DOES NOT ensure that their are no duplicates unless the flag is set!

@@ -34,21 +34,21 @@
 	customState->phase = phase;
 	customState->coins = coins;
 	
-	if (buyCard(card, customState) == -1) {
+	if (buyCard(card, customState) != 0) {
 		free(customState);
 		return 0;
 	}
 	else {
 		// Check resulting state
-		success &= TestVal2(customState->numBuys, numBuys--, "    Number of buys");
-		success &= TestVal2(customState->coins, coins - getCost(card), "    Number of coins");
+		success &= TestVal(customState->numBuys, numBuys--, "      Number of buys");
+		success &= TestVal(customState->coins, coins - getCost(card), "      Number of coins");
 		if (numBuys-1 > 0 && coins - getCost(card) > 0)
-			success &= Test(customState->phase, "    Still in buy phase");
+			success &= Test(customState->phase, "      Still in buy phase");
 		else
-			success &= Test(customState->phase, "    Moved to cleanup phase");
+			success &= Test(customState->phase, "      Moved to cleanup phase");
 		// The last card in the discard should be the new card
-		success &= Test(customState->discard[player][customState->discardCount[player]-1] == card, "    Gained card");
-		success &= TestVal2(customState->supplyCount[card], state->supplyCount[card]--, "    Supply reduced");
+		success &= Test(customState->discard[player][customState->discardCount[player]-1] == card, "      Gained card");
+		success &= TestVal(customState->supplyCount[card], state->supplyCount[card]--, "      Supply reduced");
 		// other supplies unchanged
 		int i;
 		int otherSuppliesOK = 1;
@@ -57,7 +57,7 @@
 			if (i != card)
 				otherSuppliesOK &= (state->supplyCount[i] == customState->supplyCount[i]);
 		}
-		success &= Test(otherSuppliesOK, "    Non-purchased supplies unchanged");
+		success &= Test(otherSuppliesOK, "      Non-purchased supplies unchanged");
 		free(customState);
 		return success;
 	}
@@ -82,8 +82,9 @@ int main (int argc, char** argv) {
 		int card;
 		int numTypes = treasure_map + 1;
 		for (card = 0; card < numTypes; ++card) {
+			
 			// Buy with enough buys and coins
-			TryBuy(state, 0, card, 0, 1, BUY_PHASE, getCost(card));
+			success &= Test(TryBuy(state, 0, card, 0, 1, BUY_PHASE, getCost(card)) == 1, "    Allowed Buy");
 			// Wrong phase
 			TryBuy(state, 0, card, 0, 1, CLEANUP_PHASE, getCost(card));
 			TryBuy(state, 0, card, 0, 1, ACTION_PHASE, getCost(card));
@@ -106,8 +107,8 @@ int main (int argc, char** argv) {
 	}
 	free(state);
 	if (success)
-		printf("Unit tests PASSED\n");
+		printf("Unit Test 3 PASSED\n");
 	else
-		printf("Unit tests FAILED\n");
+		printf("Unit Test 3 FAILED\n");
 	return 0;
 }

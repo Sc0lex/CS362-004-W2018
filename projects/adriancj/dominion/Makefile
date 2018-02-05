@@ -1,7 +1,7 @@
 # Modified by Joel Adriance 2-3-2018
 # now provides operation for handling unit tests
 
-CFLAGS = -Wall -fpic -coverage -lm
+CFLAGS = -O0 -Wall -fpic -coverage -lm
 	
 rngs.o: rngs.h rngs.c
 	gcc -c rngs.c -g  $(CFLAGS)
@@ -42,7 +42,7 @@ testUtils.o: testUtils.c testUtils.h
 	gcc -c testUtils.c
 
 unittest1: unittest1.c testUtils.o dominion.o rngs.o
-	gcc -o unittest1 unittest1.c testUtils.o dominion.o rngs.o $(CFLAGS) 
+	gcc -o unittest1 unittest1.c testUtils.o dominion.o rngs.o $(CFLAGS)
 unittest2: unittest2.c testUtils.o dominion.o rngs.o
 	gcc -o unittest2 unittest2.c testUtils.o dominion.o rngs.o $(CFLAGS)
 unittest3: unittest3.c testUtils.o dominion.o rngs.o
@@ -63,20 +63,35 @@ unittests: unittest1 unittest2 unittest3 unittest4
 cardtests: cardtest1 cardtest2 cardtest3 cardtest4
 
 unittestresults.out: unittests cardtests 
-	echo "Compiled all unit tests."	
-	echo "Running unit tests..."
-	unittest1 >> unittestresults.out 
-	#gcov -abcfu dominion.c | sed -n '/shuffle/{n;p; n;p; n;p; n;p}' >> unittestresults.out
-	unittest2 >> unittestresults.out
-	unittest3 >> unittestresults.out
-	unittest4 >> unittestresults.out
-	echo "Running card tests..."
-	cardtest1 >> unittestresults.out
-	cardtest2 >> unittestresults.out
-	cardtest3 >> unittestresults.out
-	cardtest4 >> unittestresults.out
+	echo "" 							>  unittestresults.out
+	echo "--- Unit Test 1 Results ---"  >> unittestresults.out
+	unittest1 							>> unittestresults.out
+	echo "" 							>> unittestresults.out
+	echo "--- Unit Test 2 Results ---"  >> unittestresults.out
+	unittest2 							>> unittestresults.out
+	echo "" 							>> unittestresults.out
+	echo "--- Unit Test 3 Results ---"  >> unittestresults.out
+	unittest3 							>> unittestresults.out
+	echo "" 							>> unittestresults.out
+	echo "--- Unit Test 4 Results ---"  >> unittestresults.out
+	unittest4 							>> unittestresults.out
+	echo "" 							>> unittestresults.out
+	echo "--- Card Test 1 Results ---"  >> unittestresults.out
+	cardtest1 							>> unittestresults.out
+	echo "" 							>> unittestresults.out
+	echo "--- Card Test 2 Results ---"  >> unittestresults.out
+	cardtest2 							>> unittestresults.out
+	echo "" 							>> unittestresults.out
+	echo "--- Card Test 3 Results ---"  >> unittestresults.out
+	cardtest3 							>> unittestresults.out
+	echo "" 							>> unittestresults.out
+	echo "--- Card Test 4 Results ---"  >> unittestresults.out
+	cardtest4 							>> unittestresults.out
+	echo "" 							>> unittestresults.out
+	echo "--- Unit Test Coverage ---"   >> unittestresults.out
+	gcov -f -b dominion.c 				>> unittestresults.out	
 	
 all: playdom player testDrawCard testBuyCard badTestDrawCard
 
 clean:
-	rm -f *.o playdom.exe playdom player player.exe  *.gcov *.gcda *.gcno *.so *.out testDrawCard testDrawCard.exe
+	rm -f *.o playdom.exe playdom player player.exe *.gcov *.gcda *.gcno *.so *.out testDrawCard testDrawCard.exe
