@@ -197,7 +197,7 @@ int AllSuppliesMatch(struct gameState* state1, struct gameState* state2){
 int SameCardCombo(int* set1, int count1, int* set2, int count2) {
 	if (count1 != count2)
 		return 0;
-	int numTypes = treasure_map + 1;
+	int numTypes = (int)treasure_map + 1;
 	
 	// Count the cards of each type and compare
 	int* cardCnts1 = malloc(sizeof(int) * numTypes);
@@ -212,10 +212,11 @@ int SameCardCombo(int* set1, int count1, int* set2, int count2) {
 	}
 	// Compare the counts
 	for (i = 0; i < numTypes; ++i) {
-		if (cardCnts1[i] != cardCnts2[i])
+		if (cardCnts1[i] != cardCnts2[i]) {
 			free(cardCnts1);
 			free(cardCnts2);
 			return 0;
+		}
 	}	
 	free(cardCnts1);
 	free(cardCnts2);

@@ -10,14 +10,6 @@ Summary of 6 test type failures:
       226019073
       755745545
       464640852
-  Player didn't discard the right number of cards
-    Total failures: 19445
-    First 5 failure seeds: 
-      1804289383
-      2087515640
-      226019073
-      755745545
-      464640852
   Adventurer was not in played cards
     Total failures: 20000
     First 5 failure seeds: 
@@ -26,6 +18,14 @@ Summary of 6 test type failures:
       226019073
       755745545
       464640852
+  Player didn't discard the right number of cards
+    Total failures: 18176
+    First 5 failure seeds: 
+      2087515640
+      226019073
+      755745545
+      464640852
+      1606349760
   Player had no treasure cards in deck, but hand changed
     Total failures: 552
     First 5 failure seeds: 
@@ -35,7 +35,7 @@ Summary of 6 test type failures:
       1389808932
       1489787632
   Player had no treasure cards in deck, but deck changed
-    Total failures: 540
+    Total failures: 543
     First 5 failure seeds: 
       1323689197
       511375430
@@ -59,15 +59,15 @@ Taken at least once:100.00% of 8
 No calls
 
 Function 'gainCard'
-Lines executed:0.00% of 13
-Branches executed:0.00% of 6
-Taken at least once:0.00% of 6
-Calls executed:0.00% of 1
+Lines executed:61.54% of 13
+Branches executed:100.00% of 6
+Taken at least once:50.00% of 6
+Calls executed:100.00% of 1
 
 Function 'discardCard'
-Lines executed:92.31% of 13
+Lines executed:84.62% of 13
 Branches executed:100.00% of 6
-Taken at least once:66.67% of 6
+Taken at least once:50.00% of 6
 No calls
 
 Function 'baronEffect'
@@ -77,10 +77,10 @@ Taken at least once:0.00% of 18
 Calls executed:0.00% of 8
 
 Function 'stewardEffect'
-Lines executed:100.00% of 10
-Branches executed:100.00% of 4
-Taken at least once:100.00% of 4
-Calls executed:100.00% of 5
+Lines executed:0.00% of 10
+Branches executed:0.00% of 4
+Taken at least once:0.00% of 4
+Calls executed:0.00% of 5
 
 Function 'feastEffect'
 Lines executed:0.00% of 16
@@ -89,10 +89,10 @@ Taken at least once:0.00% of 10
 Calls executed:0.00% of 5
 
 Function 'adventurerEffect'
-Lines executed:87.50% of 16
-Branches executed:100.00% of 12
-Taken at least once:91.67% of 12
-Calls executed:100.00% of 2
+Lines executed:100.00% of 15
+Branches executed:100.00% of 10
+Taken at least once:100.00% of 10
+Calls executed:100.00% of 1
 
 Function 'smithyEffect'
 Lines executed:100.00% of 5
@@ -101,15 +101,15 @@ Taken at least once:100.00% of 2
 Calls executed:100.00% of 2
 
 Function 'cardEffect'
-Lines executed:5.45% of 165
+Lines executed:7.88% of 165
 Branches executed:14.47% of 152
-Taken at least once:2.63% of 152
-Calls executed:8.89% of 45
+Taken at least once:3.29% of 152
+Calls executed:11.11% of 45
 
 Function 'getCost'
-Lines executed:0.00% of 30
-Branches executed:0.00% of 28
-Taken at least once:0.00% of 28
+Lines executed:96.67% of 30
+Branches executed:100.00% of 28
+Taken at least once:96.43% of 28
 No calls
 
 Function 'drawCard'
@@ -148,13 +148,13 @@ No branches
 No calls
 
 Function 'fullDeckCount'
-Lines executed:0.00% of 9
-Branches executed:0.00% of 12
-Taken at least once:0.00% of 12
+Lines executed:100.00% of 9
+Branches executed:100.00% of 12
+Taken at least once:100.00% of 12
 No calls
 
 Function 'supplyCount'
-Lines executed:0.00% of 2
+Lines executed:100.00% of 2
 No branches
 No calls
 
@@ -169,15 +169,15 @@ No branches
 Calls executed:0.00% of 1
 
 Function 'buyCard'
-Lines executed:0.00% of 13
-Branches executed:0.00% of 6
-Taken at least once:0.00% of 6
-Calls executed:0.00% of 4
+Lines executed:100.00% of 13
+Branches executed:100.00% of 6
+Taken at least once:100.00% of 6
+Calls executed:100.00% of 4
 
 Function 'playCard'
-Lines executed:71.43% of 14
+Lines executed:78.57% of 14
 Branches executed:100.00% of 10
-Taken at least once:50.00% of 10
+Taken at least once:60.00% of 10
 Calls executed:100.00% of 3
 
 Function 'shuffle'
@@ -187,9 +187,9 @@ Taken at least once:100.00% of 8
 Calls executed:100.00% of 2
 
 Function 'initializeGame'
-Lines executed:93.55% of 62
+Lines executed:98.39% of 62
 Branches executed:100.00% of 46
-Taken at least once:89.13% of 46
+Taken at least once:97.83% of 46
 Calls executed:100.00% of 5
 
 Function 'kingdomCards'
@@ -209,9 +209,9 @@ Taken at least once:100.00% of 4
 No calls
 
 File 'dominion.c'
-Lines executed:32.19% of 553
-Branches executed:30.77% of 416
-Taken at least once:23.32% of 416
-Calls executed:26.88% of 93
+Lines executed:42.93% of 552
+Branches executed:42.03% of 414
+Taken at least once:35.02% of 414
+Calls executed:27.17% of 92
 Creating 'dominion.c.gcov'
 

@@ -212,9 +212,15 @@ int shuffle(int player, struct gameState *state) {
   /* SORT CARDS IN DECK TO ENSURE DETERMINISM! */
 
   while (state->deckCount[player] > 0) {
-	card = floor(Random() * state->deckCount[player]);
+	//card = floor(Random() * state->deckCount[player]);
+	// Added -1, but not in parentheses
+	card = floor(Random() * (state->deckCount[player]-1));
+	
+	// Assigns the card from the original deck at the randomly generated index to
+	// the new deck at newDeckPos
 	newDeck[newDeckPos] = state->deck[player][card];
 	newDeckPos++;
+	
 	for (i = card; i < state->deckCount[player]-1; i++) {
 	  state->deck[player][i] = state->deck[player][i+1];
 	}
@@ -1070,13 +1076,14 @@ int smithyEffect(struct gameState *state, int currentPlayer, int handPos) {
 int adventurerEffect(struct gameState *state, int currentPlayer) {
 	int drawntreasure = 0;
 	int cardDrawn;
-	int temphand[MAX_HAND];
+	int temphand[MAX_HAND]; // Holds non-treasure drawn cards
 	int z = 0;// this is the counter for the temp hand
 	
 	while(drawntreasure<2){ 
+		/* This is not necessary since drawCard shuffles the discard back into the deck if the deck is empty
 		if (state->deckCount[currentPlayer] <1){//if the deck is empty we need to shuffle discard and add to deck
 			shuffle(currentPlayer, state);
-		}
+		}*/
 		drawCard(currentPlayer, state);
 		cardDrawn = state->hand[currentPlayer][state->handCount[currentPlayer]-1];//top card of hand is most recently drawn card.
 		if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold)
@@ -1085,10 +1092,12 @@ int adventurerEffect(struct gameState *state, int currentPlayer) {
 			temphand[z]=cardDrawn;
 			state->handCount[currentPlayer]--; //this should just remove the top card (the most recently drawn one).
 			// BUG - forgot to increment card count.
-			//z++;
+			z++;
 		}
 	}
-	while(z-1>=0){
+	// Made meaning more clear
+	//while(z-1>=0){
+	while (z >= 1) {
 		state->discard[currentPlayer][state->discardCount[currentPlayer]++]=temphand[z-1]; // discard all cards in play that have been drawn
 		z=z-1;
 	}
