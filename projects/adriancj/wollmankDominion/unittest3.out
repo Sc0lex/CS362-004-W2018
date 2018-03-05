@@ -1,0 +1,713 @@
+
+--- Unit Test 3 Results ---
+Running unittest3 (buyCard)...
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 10 Actual: 9)
+      Non-purchased supplies unchanged - PASSED
+    Allowed Buy - FAILED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 9 Actual: 8)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 8 Actual: 7)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 2 Actual: 1)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 7 Actual: 6)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 6 Actual: 5)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 8 Actual: 7)
+      Non-purchased supplies unchanged - PASSED
+    Allowed Buy - FAILED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 7 Actual: 6)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 6 Actual: 5)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 2 Actual: 1)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 5 Actual: 4)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - FAILED
+      Supply reduced - FAILED (Expected: 4 Actual: 3)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 8 Actual: 7)
+      Non-purchased supplies unchanged - PASSED
+    Allowed Buy - FAILED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 7 Actual: 6)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 6 Actual: 5)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 2 Actual: 1)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 5 Actual: 4)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - FAILED
+      Supply reduced - FAILED (Expected: 4 Actual: 3)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 8 Actual: 7)
+      Non-purchased supplies unchanged - PASSED
+    Allowed Buy - FAILED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 7 Actual: 6)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 6 Actual: 5)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 2 Actual: 1)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 5 Actual: 4)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - FAILED
+      Supply reduced - FAILED (Expected: 4 Actual: 3)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 46 Actual: 45)
+      Non-purchased supplies unchanged - PASSED
+    Allowed Buy - FAILED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 45 Actual: 44)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 44 Actual: 43)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 2 Actual: 1)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 43 Actual: 42)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - FAILED
+      Supply reduced - FAILED (Expected: 42 Actual: 41)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 40 Actual: 39)
+      Non-purchased supplies unchanged - PASSED
+    Allowed Buy - FAILED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 39 Actual: 38)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 38 Actual: 37)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 2 Actual: 1)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 37 Actual: 36)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - FAILED
+      Supply reduced - FAILED (Expected: 36 Actual: 35)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 30 Actual: 29)
+      Non-purchased supplies unchanged - PASSED
+    Allowed Buy - FAILED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 29 Actual: 28)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 28 Actual: 27)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 2 Actual: 1)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 27 Actual: 26)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - FAILED
+      Supply reduced - FAILED (Expected: 26 Actual: 25)
+      Non-purchased supplies unchanged - PASSED
+    Allowed Buy - FAILED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 10 Actual: 9)
+      Non-purchased supplies unchanged - PASSED
+    Allowed Buy - FAILED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 9 Actual: 8)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 8 Actual: 7)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 2 Actual: 1)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 7 Actual: 6)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - FAILED
+      Supply reduced - FAILED (Expected: 6 Actual: 5)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 10 Actual: 9)
+      Non-purchased supplies unchanged - PASSED
+    Allowed Buy - FAILED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 9 Actual: 8)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 8 Actual: 7)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 2 Actual: 1)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 7 Actual: 6)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - FAILED
+      Supply reduced - FAILED (Expected: 6 Actual: 5)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 8 Actual: 7)
+      Non-purchased supplies unchanged - PASSED
+    Allowed Buy - FAILED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 7 Actual: 6)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 6 Actual: 5)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 2 Actual: 1)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 5 Actual: 4)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - FAILED
+      Supply reduced - FAILED (Expected: 4 Actual: 3)
+      Non-purchased supplies unchanged - PASSED
+    Allowed Buy - FAILED
+    Allowed Buy - FAILED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 10 Actual: 9)
+      Non-purchased supplies unchanged - PASSED
+    Allowed Buy - FAILED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 9 Actual: 8)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 8 Actual: 7)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 2 Actual: 1)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 7 Actual: 6)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - FAILED
+      Supply reduced - FAILED (Expected: 6 Actual: 5)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 10 Actual: 9)
+      Non-purchased supplies unchanged - PASSED
+    Allowed Buy - FAILED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 9 Actual: 8)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 8 Actual: 7)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 2 Actual: 1)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 7 Actual: 6)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - FAILED
+      Supply reduced - FAILED (Expected: 6 Actual: 5)
+      Non-purchased supplies unchanged - PASSED
+    Allowed Buy - FAILED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 8 Actual: 7)
+      Non-purchased supplies unchanged - PASSED
+    Allowed Buy - FAILED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 7 Actual: 6)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 6 Actual: 5)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 2 Actual: 1)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 5 Actual: 4)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - FAILED
+      Supply reduced - FAILED (Expected: 4 Actual: 3)
+      Non-purchased supplies unchanged - PASSED
+    Allowed Buy - FAILED
+    Allowed Buy - FAILED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 10 Actual: 9)
+      Non-purchased supplies unchanged - PASSED
+    Allowed Buy - FAILED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 9 Actual: 8)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 8 Actual: 7)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 2 Actual: 1)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 7 Actual: 6)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - FAILED
+      Supply reduced - FAILED (Expected: 6 Actual: 5)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 10 Actual: 9)
+      Non-purchased supplies unchanged - PASSED
+    Allowed Buy - FAILED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 9 Actual: 8)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 8 Actual: 7)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 2 Actual: 1)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 7 Actual: 6)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - FAILED
+      Supply reduced - FAILED (Expected: 6 Actual: 5)
+      Non-purchased supplies unchanged - PASSED
+    Allowed Buy - FAILED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 10 Actual: 9)
+      Non-purchased supplies unchanged - PASSED
+    Allowed Buy - FAILED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 9 Actual: 8)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 8 Actual: 7)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 2 Actual: 1)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 7 Actual: 6)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - FAILED
+      Supply reduced - FAILED (Expected: 6 Actual: 5)
+      Non-purchased supplies unchanged - PASSED
+    Allowed Buy - FAILED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 10 Actual: 9)
+      Non-purchased supplies unchanged - PASSED
+    Allowed Buy - FAILED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 9 Actual: 8)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 8 Actual: 7)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 2 Actual: 1)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 7 Actual: 6)
+      Non-purchased supplies unchanged - PASSED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - FAILED
+      Supply reduced - FAILED (Expected: 6 Actual: 5)
+      Non-purchased supplies unchanged - PASSED
+    Allowed Buy - FAILED
+    Allowed Buy - FAILED
+      Number of buys - FAILED (Expected: 1 Actual: 0)
+      Number of coins - PASSED
+      Moved to cleanup phase - PASSED
+      Gained card - PASSED
+      Supply reduced - FAILED (Expected: 41 Actual: 40)
+      Non-purchased supplies unchanged - PASSED
+Card buy test - FAILED
+Unit Test 3 FAILED
+
+--- Unit Test 3 Coverage ---
+Function 'minionFunc'
+Lines executed:0.00% of 18
+Branches executed:0.00% of 18
+Taken at least once:0.00% of 18
+Calls executed:0.00% of 6
+
+Function 'mineFunc'
+Lines executed:0.00% of 13
+Branches executed:0.00% of 14
+Taken at least once:0.00% of 14
+Calls executed:0.00% of 5
+
+Function 'council_roomFunc'
+Lines executed:0.00% of 9
+Branches executed:0.00% of 6
+Taken at least once:0.00% of 6
+Calls executed:0.00% of 3
+
+Function 'smithyFunc'
+Lines executed:0.00% of 5
+Branches executed:0.00% of 2
+Taken at least once:0.00% of 2
+Calls executed:0.00% of 2
+
+Function 'adventurerFunc'
+Lines executed:0.00% of 14
+Branches executed:0.00% of 12
+Taken at least once:0.00% of 12
+Calls executed:0.00% of 2
+
+Function 'updateCoins'
+Lines executed:81.82% of 11
+Branches executed:100.00% of 8
+Taken at least once:75.00% of 8
+No calls
+
+Function 'gainCard'
+Lines executed:61.54% of 13
+Branches executed:100.00% of 6
+Taken at least once:50.00% of 6
+Calls executed:100.00% of 1
+
+Function 'discardCard'
+Lines executed:0.00% of 13
+Branches executed:0.00% of 6
+Taken at least once:0.00% of 6
+No calls
+
+Function 'cardEffect'
+Lines executed:0.00% of 190
+Branches executed:0.00% of 147
+Taken at least once:0.00% of 147
+Calls executed:0.00% of 51
+
+Function 'getCost'
+Lines executed:96.67% of 30
+Branches executed:100.00% of 28
+Taken at least once:96.43% of 28
+No calls
+
+Function 'drawCard'
+Lines executed:36.36% of 22
+Branches executed:33.33% of 6
+Taken at least once:16.67% of 6
+Calls executed:0.00% of 1
+
+Function 'getWinners'
+Lines executed:0.00% of 24
+Branches executed:0.00% of 22
+Taken at least once:0.00% of 22
+Calls executed:0.00% of 2
+
+Function 'scoreFor'
+Lines executed:0.00% of 24
+Branches executed:0.00% of 42
+Taken at least once:0.00% of 42
+Calls executed:0.00% of 3
+
+Function 'isGameOver'
+Lines executed:0.00% of 10
+Branches executed:0.00% of 8
+Taken at least once:0.00% of 8
+No calls
+
+Function 'endTurn'
+Lines executed:0.00% of 20
+Branches executed:0.00% of 6
+Taken at least once:0.00% of 6
+Calls executed:0.00% of 3
+
+Function 'whoseTurn'
+Lines executed:0.00% of 2
+No branches
+No calls
+
+Function 'fullDeckCount'
+Lines executed:0.00% of 9
+Branches executed:0.00% of 12
+Taken at least once:0.00% of 12
+No calls
+
+Function 'supplyCount'
+Lines executed:100.00% of 2
+No branches
+No calls
+
+Function 'handCard'
+Lines executed:0.00% of 3
+No branches
+Calls executed:0.00% of 1
+
+Function 'numHandCards'
+Lines executed:0.00% of 2
+No branches
+Calls executed:0.00% of 1
+
+Function 'buyCard'
+Lines executed:100.00% of 13
+Branches executed:100.00% of 6
+Taken at least once:100.00% of 6
+Calls executed:100.00% of 4
+
+Function 'playCard'
+Lines executed:0.00% of 14
+Branches executed:0.00% of 10
+Taken at least once:0.00% of 10
+Calls executed:0.00% of 3
+
+Function 'shuffle'
+Lines executed:93.75% of 16
+Branches executed:100.00% of 8
+Taken at least once:87.50% of 8
+Calls executed:100.00% of 2
+
+Function 'initializeGame'
+Lines executed:98.39% of 62
+Branches executed:100.00% of 46
+Taken at least once:97.83% of 46
+Calls executed:100.00% of 5
+
+Function 'kingdomCards'
+Lines executed:0.00% of 13
+No branches
+No calls
+
+Function 'newGame'
+Lines executed:0.00% of 3
+No branches
+No calls
+
+Function 'compare'
+Lines executed:100.00% of 6
+Branches executed:100.00% of 4
+Taken at least once:100.00% of 4
+No calls
+
+File 'dominion.c'
+Lines executed:26.92% of 561
+Branches executed:25.90% of 417
+Taken at least once:23.74% of 417
+Calls executed:12.63% of 95
+Creating 'dominion.c.gcov'
+

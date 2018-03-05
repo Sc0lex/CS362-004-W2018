@@ -1,0 +1,70 @@
+
+Title:
+	Bug 1 - 'handCount' not decremented in adventurerFunc
+Product:
+	wollmankDominion/dominion.c
+	Forked from "https://github.com/aburasa/CS362-004-W2018"
+Classification:
+	Moderate Bug
+Platform:
+	Windows 10 w/ PuTTY 0.67 for SSH into 'flip1'
+	GNU bash, version 4.2.46(2)-release (x86_64-redhat-linux-gnu)
+Description:
+	I was performing a unit test on the adventurerFunc that handles the effect of 
+	the Adventurer card. In doing so, I explicitly created a set of deck cards that 
+	would force drawing of more than two cards by placing only two treasure cards in
+	the deck with an assortment of non-treasure cards in between. After calling
+	adventurerFunc, the discard does not contain the expected non-treasure cards. 
+	Debugging and code inspection of dominion.c revealed that line 1225 performs no
+	action, although it is commented such that it indicates an intention to remove the
+	card from the player's hand and is a suspected cause of the problem.
+
+	The bug is moderate because if the player has additional actions for some reason, cards
+	that should be discarded will still be in the hand, making the Adventurer card more
+	powerful than intended. However, since only non-treasure cards are added to the hand,
+	this is should only affect rounds in which a player has additional actions available.
+Reproduction:
+	Reproducible anytime a non-treasure card must be drawn to reveal the required
+	two treasure cards per the Adventurer action.
+
+	Play an adventurer card when the player's deck does not have two consecutive
+	treasure cards to be drawn next. The player's hand will retain the non-treasure
+	cards instead of being placed in the discard array of the game state immediately.
+Expected Result:
+	Drawn non-treasure cards should go into the player's discard pile
+Actual Result:
+	Drawn non-treasure cards go into the player's hand
+Contact:
+	Joel Adriance (adriancj@oregonstate.edu)
+
+
+Title:
+	Bug 2 - Smithy is trashed instead of discarded when played
+Product:
+	wollmankDominion/dominion.c
+	Forked from "https://github.com/aburasa/CS362-004-W2018"
+Classification:
+	Major Bug
+Platform:
+	Windows 10 w/ PuTTY 0.67 for SSH into 'flip1'
+	GNU bash, version 4.2.46(2)-release (x86_64-redhat-linux-gnu)
+Description:
+	I was performing a unit test on the smithyFunc that handles the effect of the 
+	Smithy card. The player draws three cards as expected, but the Smithy card does
+	not end up in the discard pile for the player. Instead, the card is trashed 
+	completely. Debugging and inspection of the code at line 1245 of dominion.c 
+	reveals that the trash flag '1' is big specified for the discard rather than the
+	'0', which the discard function documentation suggests would indicate that the card
+	should not be trashed.
+	
+	This is a major bug because it causes the loss of a card from a player's deck. I.e.
+	every time a player plays a Smithy, they lose it - significantly compromising the 
+	game play.
+Reproduction:
+	This occurs every time a Smithy card 
+Expected Result:
+	Smithy card should be in the player's discard pile at the end of the turn
+Actual Result:
+	The Smithy card is no longer in the players hand, deck or discard pile
+Contact:
+	Joel Adriance (adriancj@oregonstate.edu)
